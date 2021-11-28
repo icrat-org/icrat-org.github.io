@@ -1,0 +1,2775 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>ICRAT - International conference for Research & Air Traffic</title>
+
+    <!-- Custom CSS -->
+    <link href="../../static/css/business-frontpage.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha512-UDJtJXfzfsiPPgnI5S1000FPLBHMhvzAMX15I+qG2E2OAzC9P1JzUwJOfnypXiOH7MRPaqzhPbBGDNNj7zBfoA==" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+    <![endif]-->
+
+	
+
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+
+<style>
+h2.trigger {
+	padding: 0 0 0 0px;
+	margin: 0 0 5px 0;
+	background: url() no-repeat;
+	height: 46px;
+	line-height: 46px;
+	width: 400px;
+	font-size: 13px;
+	font-weight: bold;
+	float: left; }
+h2.trigger a {
+	color: #00F;
+	text-decoration: none;
+}
+h2.trigger a:hover { color: #ccc; }
+h2.active {background-position: left bottom;} /*--When toggle is triggered, it will shift the image to the bottom to show its "opened" state--*/
+.toggle_container {
+	margin: 0 0 5px;
+	padding: 0;
+	border-top: 1px solid #d6d6d6;
+	background: #f0f0f0 url() repeat-y left top;
+	overflow: hidden;
+	font-size: 14px;
+	width: 100%;
+	clear: both;
+}
+.toggle_container .block {
+	padding: 20px; /*--Padding of Container--*/
+	background: url() no-repeat left bottom; /*--Bottom rounded corners--*/
+}
+	.papers {border-collapse: collapse}
+	.papers td{border-bottom:1px solid grey;}
+	.papers td:first-child {border-right:1px solid grey;}
+	.papers th{text-align:center; border-bottom:1px solid black; padding-bottom:10px}
+
+	.papers td { padding:5px;  }
+	.papers td img{margin:0px; padding:5px 0 0 0; }
+</style>
+
+<script>
+$(document).ready(function(){
+
+	//Hide (Collapse) the toggle containers on load
+	$(".toggle_container").hide();
+
+	//Switch the "Open" and "Close" state per click then slide up/down (depending on open/close state)
+	$("h2.trigger").click(function(){
+		$(this).toggleClass("active").next().slideToggle("slow");
+		return false; //Prevent the browser jump to the link anchor
+	});
+
+});
+</script>
+
+
+	
+</head>
+
+<body>
+    
+   <div id="watermark" class="hidden-xs hidden-sm hidden-md">
+  <img src="../../static/images/watermark.png" />
+    </div>
+
+    <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../../" style="font-size: 14px!important;">Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+               
+                <!--li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Upcoming Conference <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+
+                    <li>
+                    <a href="../../upcoming-conference/">Conference Information</a>
+                    </li>
+
+                    <li>
+                    <a href="../../upcoming-conference/committee-members/"> Conference Committee</a>
+                    </li>
+
+                    <li>
+                    <a href="../../upcoming-conference/papers/Abstracts_ICRAT2020.pdf">2020 ICRAT Book of Abstracts</a>
+                    </li>
+
+                    <li>
+                    <a href="../../upcoming-conference/papers/">2020 Presentations and Technical Papers</a>
+                    </li>
+                    
+                    <li>
+                    <a href="https://easychair.org/conferences/?conf=icrat2020">EasyChair Paper Submissions</a>
+                    </li>
+                    
+                           
+                    <li>
+                    <a href="../../upcoming-conference/call-for-papers/">Call for Papers</a>
+                    </li>
+                    
+                    <li>
+                    <a href="../../upcoming-conference/call-for-papers/ICRAT_2020_Call_for_Papers.pdf">Call for Papers (PDF)</a>
+                    </li>
+                    <li>
+                    <a href="../../upcoming-conference/call-for-papers/ICRAT2020_regular_paper_template.doc"/>Regular Paper Template</a>
+                    </li>
+                    
+                    <li>
+                    <a href="../../upcoming-conference/call-for-papers/ICRAT2020_doctoral_symposium_template.doc">Doctorial Symposium Template</a>
+                    </li>
+                    </ul>
+                </li-->
+
+                <!--li>
+                <a href="../../upcoming-conference/">Upcoming Conference</a>
+                </li-->
+
+
+                <li>
+                <a href="../../previous-conferences/">Previous Conferences</a>
+                </li>
+               
+            </ul>
+        </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Image Background Page Header -->
+    <!-- Note: The background image is set within the business-casual.css file. -->
+    <header class="business-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    
+                    <img src="../../static/images/header.jpg" class="img-responsive" />
+                  <!-- Optional Tagline  <h1 class="tagline">USA/Europe Air Traffic Management Research and Development Seminars</h1> -->
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        
+
+        <div class="row">
+            <div class="col-sm-12">
+                 
+                    
+                
+
+  <h2>ICRAT 7th International Conference</h2>
+  
+  
+
+
+<div class="col-sm-12">
+
+
+
+
+
+
+
+
+
+<h3>Keynotes</h3>
+<table cellpadding="17" width="100%" class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th></th>
+      <th>Title</th>
+      
+      
+      
+      <th>Presentation</th> 
+      
+    </tr>
+  </thead>
+  <tbody>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Autonomous UAS Research</strong><br />
+        
+        Authors: <em>
+            C.J Taylor, University of Pennsylvania &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+
+    
+    
+    
+    <td align="center">
+             &nbsp;         
+    </td>
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>ATC In The Present/Future</strong><br />
+        
+        Authors: <em>
+            Eric Silverman, Manager ATC/Airfield Operations:PHL/NY &amp; NE Region Airport Operations at PHL American Airlines &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1WAo9wB-F5Zt4LZVf828xGM-8Lz6-SRkS/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Quantitative Risk Management</strong><br />
+        
+        Authors: <em>
+            Captain Manfred Müller, Deutsche Lufthansa AG, Flight Safety Department FRA CF/J &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/19A1Tj5D4QNszOzn6Jm_ZU8aDosNFDTYr/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+
+  </tr>
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+<h3>Tutorials</h3>
+<table cellpadding="17" width="100%" class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th></th>
+      <th>Title</th>
+      
+      <th>Paper</th> 
+      
+      
+      
+    </tr>
+  </thead>
+  <tbody>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Human Performance Measurement</strong><br />
+        
+        Author: <em>
+            Brian Hilburn (CHPR) &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1hv6i3bA3dydt8MWYCicj2EtPI045N-n4/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Human–in–the–Loop Simulation</strong><br />
+        
+        Author: <em>
+            Michael Schultz (DLR) &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1KXnjzimzH-Let-no1WO-UwA_t6474Va-/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Aircraft Performance Models in ATM Simulation</strong><br />
+        
+        Author: <em>
+            Jacco Hoekstra (TU Delft) &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1CgRQEFIUNJbBQ2BAAIrHUdIWZaMzjUO5/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Drone Human Factors</strong><br />
+        
+        Authors: <em>
+            Dale Richards (Coventry University, UK) &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1i1Gj8eGxyUloc9ja5LdmsZoGOHG1Ok66/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Application of Fast–time Computer Modeling for ATM Systems</strong><br />
+        
+        Authors: <em>
+            Mike Paglione, Albert Schwartz, Christina Young, Jessica Young, Marie Kee (FAA)  &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1JpOezJh7I5P5cL2YDN2rc0UZEGnoOrHA/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Quantitative Performance Assessment Studies in Air Transportation: Portable Brain Activity Monitoring Technology</strong><br />
+        
+        Author: <em>
+            Kurtulus Izzetoglu (Drexel)         &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1aw18iAy2Uyi9VZ7q9ycqO_EUWfcBlyF8/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Mathematical Optimization with Applications to ATM</strong><br />
+        
+        Author: <em>
+            Daniel Delahaye (ENAC) &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1XgZs30oz9GFo9Wu1oWJeKBzAHXh4D6rq/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+
+    
+
+  </tr>
+  
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+<h3>Accepted Papers</h3>
+<table cellpadding="17" width="100%" class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th></th>
+      <th>Title</th>
+      
+      <th>Paper</th> 
+      
+      <th>Presentation</th> 
+      <th>Theme</th> 
+    </tr>
+  </thead>
+  <tbody>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Assessment of the feasible CTA windows for efficient spacing with energy–neutral CDO</strong><br />
+        
+        Author: <em>
+             Ramon Dalmau and Xavier Prats &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/12b6Dwa8Rfr9I-plCvE8mgcuRcuWm4Lq0/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1fMC80VCNv04aecTFML_GOFIVTDeUgXSX/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Trajectory Optimization
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Effects of speed reduction in climb, cruise and descent phases to generate linear holding at no extra fuel cost</strong><br />
+        
+        Authors: <em>
+             Yan Xu, Ramon Dalmau and Xavier Prats  &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1eTxh_DR3vKTTbjttKZAIwE0kVfWU-yi3/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1zC29SeQ3GTFrrfZLDIgGYklV_z2B7SZ6/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Trajectory Optimization
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Potential Operational Benefits of Multi-layer Point Merge System on Dense TMA Operation</strong><br />
+        
+        Authors: <em>
+             Man Liang, Daniel Delahaye and Pierre Marechal   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1-IZSokabiLYUd29JWP2qptnydeBoRwoL/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1w6VJv3J9i0sJ8S7fuPoauPM4AndnMa6L/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Trajectory Optimization
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Modelling Flexible Thrust Performance for Trajectory Prediction Applications in ATM</strong><br />
+        
+        Authors: <em>
+             Ismael Matamoros, Xavier Prats, Javier López Leonés, Enrique Casado, Miguel Vilaplana, Vincent Mouillet, Angela Nuic, and Laurent Cavadini   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1cwtIk2eO7BxVlyPXGIrPgpY4Phbbi80b/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1LryrE9nt7-uAfYDjeNTJHDSa8BlI1cD1/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Trajectory Optimization
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Generating Arrival Routes with Radius–to–Fix Functionalities</strong><br />
+        
+        Author: <em>
+             Valentin Polishchuk   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1mQjl1ixLhbSzGUIBIW8w3sgl1z4b2oPc/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1vsBy6PqU5elCCrhQg4FTrira3ExB4Mxd/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Trajectory Optimization
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>ATM Performance analysis in Madrid ACC sectors considering optimal aircraft trajectories</strong><br />
+        
+        Author: <em>
+             Guillermo Orenga and Manuel Soler  &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1iqo6ESLOJlaK3XxOK7IOLgcB5MU2sFwy/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1TjBGx4juluNmRtU7uHD71pfsUGysrdaq/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Trajectory Optimization
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Phase changes in delay propagation networks</strong><br />
+        
+        Author: <em>
+             Seddik Belkoura and Massimiliano Zanin  &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1NINg06n0T9foVEZJuMrF2xSEDPKBjQXC/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1cmY7ZBRuhdv8mnFjtLzlcGB79z6cJbUS/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Advanced Modeling
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Nonlinear Dynamics Approach for Modeling of Air Traffic Performance Disruption and Recovery</strong><br />
+        
+        Authors: <em>
+             Norbert Fürstenau, Monika Mittendorf and Shumpei Kamo  &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1EgSne_Y_JdcCgOR-l7bZVuaidtksIdPy/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1H2MjK-Q3wWEzZ230KREtGhw5KcrNMhSJ/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Advanced Modeling
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Utilizing schedule buffers to reduce propagated delay: A new approach for tactical Air Traffic Flow Management slot allocation</strong><br />
+        
+        Authors: <em>
+             Nikola Ivanov, Fedja Netjasov and Radosav Jovanovic  &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1NlxtkewzQNQzDtTLx40A_KhKB21iS4q0/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1R9qh7GXp2lyfL5Gfl9COY3uFpUuECeor/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Advanced Modeling
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Uncertainty Limits for an Aircraft Based Runway Friction Assessment Method</strong><br />
+        
+        Author: <em>
+             Angela Campbell and Andrew Cheng  &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1Z0E6OwoI-iEhUgPchLpwXoMEK4w-O9u_/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1CFhNGTf21xNeGRqpyZc81X2OerVzOAbQ/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Advanced Modeling
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Large–Scale Flight Phase Identification from ADS–B Data Using Machine Learning Methods</strong><br />
+        
+        Authors: <em>
+             Junzi Sun, Joost Ellerbroek and Jacco Hoekstra   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1y1onriehlUQujQTnpyT_3q7qQIEYDbIN/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/17KH78iBPSvvhSfVAT29ziJyneMSHRnwM/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Advanced Modeling
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Modeling and Estimating Airspace Movements Using Air Traffic Control Transcription Data: A Data–Driven Approach</strong><br />
+        
+        Author: <em>
+             Max Li and Megan Ryerson    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1V5Ja1EtjRDra02faOpvP13aE5ab74WKq/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1EJi7v6CMAh9_X5carzB1BV7duwurpPj8/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Advanced Modeling
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Deconstructing Delay Dynamics: An air traffic network example</strong><br />
+        
+        Authors: <em>
+             Karthik Gopalakrishnan, Hamsa Balakrishnan and Richard Jordan     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1z4GA4ZDywgFb6nkNM4Okwa0_VoyGzA18/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1GUNr2GoDmGh95LSm5RcLIVxJXrSL1Z73/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     System Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>High performance computing simulator for the performance assessment of trajectory based operations</strong><br />
+        
+        Authors: <em>
+             Leonardo Camargo Forero, Ramon Dalmau, Sergio Ruiz and Xavier Prats     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1dQZwJT008nSto3ReonbF3uR1WG5XV08N/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1p1PFWBCA4wBhrkx9MmL_VRX-D-EHcM8w/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     System Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Performance Benchmarking in Interdependent ATM Systems: Integration of Analytical and Process Oriented Performance Benchmarking Schemes in Complex ATM Systems</strong><br />
+        
+        Authors: <em>
+             Stefan Reitmann, Alexander Gillissen and Michael Schultz     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1Xh28ttTJ-KagJFuRgz_D6UiRqKyAXw2Q/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/14HAHhpzjF-CKvRNR2WgU49Mp-6Qh3mUe/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     System Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Phase of Flight and Rule of Flight Calculator</strong><br />
+        
+        Authors: <em>
+             Charles Johnson, Adrian Rusu, Anthony Breitzman, John Bucknam and Nicholas Laposta     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1i23Xw8AsxCTZsHTkIoD0wmRkd1d5AoH4/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1g6Ap8Vq0fESgMXkqtPHzKYmzdoZhyvCw/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Complexity &amp; Information
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>SAGA: Safety Analysis in General Aviation – Leveraging Digital Flight Data towards the Development of a Flight Performance Database Tool to improve General Aviation Safe</strong><br />
+        
+        Authors: <em>
+             Josh Schimmel, Shawn Pruchnicki, Phil Smith and Seth Young     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1hQVFRWnZT6vUYBEWkc4CDnvXMf_xUy3V/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1w-O_GH2PelNPbqSJRIClbeQ-KA9IQwaA/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Complexity &amp; Information
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Transition Steps to Orthogonal Unidirectional Air Traffic Controller Monitoring Display</strong><br />
+        
+        Author: <em>
+             Oliver Ohneiser     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1xV5_EjPUvc95EZ87-39fn1dqIFEX89Zb/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1xujIAAAck1UQz-A-ApbSKPifTajdB4ch/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Decision Support
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Detect and Avoid, UAV Integration in the Lower Airspace Traffic</strong><br />
+        
+        Authors: <em>
+             Cyril Allignol, Nicolas Barnier, Nicolas Durand and Éric Blond      &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1Ug06EGpn9wVaKcE_VVQLyuk_nk9NWV9E/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1u9-SE0ijhgggDZkmZrWA2R9sUNrWu8Nf/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Decision Support
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>A Variable Neighborhood Search approach for the aircraft conflict resolution problem</strong><br />
+        
+        Authors: <em>
+             Antonio Alonso–Ayuso, Laureano F. Escudero, F. Javier Martin–Campo and Nenad Mladenovic     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1Vf-3CzcFE-Pb2M8RGR0tMkksQpYzSqkN/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1IqOTPXjTe4UNURzRXnp2yDx9ueVYeq88/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Decision Support
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Identifying Representative Traffic Management Initiatives</strong><br />
+        
+        Author: <em>
+             Alexander Estes and David Lovell     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1qZXxDZPxC_VL8TE6yxVprSdfE_y_FVI3/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1qU2POKxoNav4XMn4FLlinP_ennSw_B9f/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Decision Support
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Estimating Costs of Flight Delay to Air Cargo Carriers</strong><br />
+        
+        Authors: <em>
+             Yulin Liu, Mogeng Yin and Mark Hansen     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1sx4BQWjP2t17NBj_jI6xGEn_Czdmr53L/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1fjeWDXo4Nf7iFqiCO1M80ySqc30jPtGw/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Economics &amp; Politics
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Estimating the Long–Run Effects of Resource Allocation Mechanisms</strong><br />
+        
+        Author: <em>
+             Kleoniki Vlachou and David Lovell      &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1fSmwpWpm5zRn260OO8UGMOk7LZ3HB6i7/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/15NKJXSBeu20gfsC1KYm9TDwxLvVXgok3/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Economics &amp; Politics
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Free Routing Airspace in Europe: Implementation concepts and benefits for airspace users</strong><br />
+        
+        Author: <em>
+             Lennert Bentrup and Max Hoffmann      &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1mMd51P7KZJoDlvgjx5oESnPZhHLMoU6n/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1ARcFsmUBT94ClBotfW05u0TUFYmyOkr2/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Economics &amp; Politics
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Implementing Dynamic Air Transport Slot Trading Through Secure Auction Mechanism</strong><br />
+        
+        Authors: <em>
+             Emre Koyuncu, Baris Baspinar, Guney Guner, N. Kemal Ãœre, Massimiliano Zanin, Vaishali Mirchandani, Emilio Alvarez Pereira and Gokhan Inalhan     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/12BBA-HPdc4uV2gJHakdHGiEgEcTvAQiT/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1AIYALWihTmUK9njNkT5zgs3lnvjKB8vF/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Economics &amp; Politics
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>BlueSky ATC Simulator Project: an Open Data and Open Source Approach</strong><br />
+        
+        Author: <em>
+             Jacco Hoekstra and Joost Ellerbroek     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1LaBZZ-zuLibpZzIB13JFrEXKFKujeCMr/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1zP-MmRtHl2ga-miXz56XVxGIRiR3RMAO/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Safety &amp; Human Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Application of Common Cause Failure Methodology to Aviation Safety Assessment Model</strong><br />
+        
+        Author: <em>
+             Seungwon Noh and John Shortle    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1PVL_uJoWYU7If0ZnAJnPoHZzxamGsy7k/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1p36QnhxJ-89UQJxgKBzNioWwKeGF3XCF/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Safety &amp; Human Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Improving the Nowcast of Unstable Approaches</strong><br />
+        
+        Authors: <em>
+             Zhenming Wang, Lance Sherry and John Shortle    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1q6PJnQvyvrDnvg2LJ34CON_65i0927zh/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1rCdr07uJmFIb7gUWPRPPNTgSBB5XZaaF/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Safety &amp; Human Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Runway Centerline Deviation Estimation from Point Clouds using LiDAR Imagery</strong><br />
+        
+        Authors: <em>
+             Zoltan Koppanyi, Charles K. Toth and Seth Young      &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1ovO6xpHkfydWa7hj4dlWPWnlP-oOGP25/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1_EW_QhztLvKWrJWVaN3GBad2lSs5jvG3/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Safety &amp; Human Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Weather Technology in the Cockpit: Analysis of Pilot Decision Making</strong><br />
+        
+        Authors: <em>
+             Brandon Lundeen, Shawn Pruchnicki and Seth Young      &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1C9LP-H74EOZg8HOi-THyws4PaoW5bNrv/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1Fr_sk5m5Jmq6pPjATAhGQHE8gtxsCzMa/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Safety &amp; Human Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>How Do Layered Airspace Design Parameters Affect Airspace Capacity and Safety?</strong><br />
+        
+        Authors: <em>
+             Jacco Hoekstra, Jerom Maas, Martijn Tra and Emmanuel Sunil          &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1rX8efkR4hFersmQLrs2yrjR4gSiJ260R/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1pCYiCCDJZLc28pzLvGjRzOEj_bvJdiIl/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Safety &amp; Human Performance
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Wind and Temperature Networking Applied to Aircraft Trajectory Prediction</strong><br />
+        
+        Authors: <em>
+             Karim Legrand, Daniel Delahaye and Christophe Rabut           &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1T0_Q0RdgUhShKgrCZbYmYrsZry7mw-oz/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1vrpyZBMH89c0-8Mafr_ju8zZbvp1Cw9V/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Network Management
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>The Influence of Traffic Structure on  Airspace Capacity</strong><br />
+        
+        Authors: <em>
+             Emmanuel Sunil, Jacco Hoekstra, Joost Ellerbroek, Frank Bussink, Andrija Vidosavljevic, Daniel Delahaye and Dennis Nieuwenhuisen          &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1SUzrDG1Sjbgs6V1a3BhHG5frzI1UZfyO/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1JxuthLtJm_HCJwFRQt1Ueh4lfuR2cz7k/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Network Management
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Merging Flows in Terminal Maneuvering Area using Time Decomposition Approach</strong><br />
+        
+        Authors: <em>
+             Ji Ma, Daniel Delahaye, Mohammed Sbihi and Marcel Mongeau            &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1T7hyR9iBpVDAVXl9Cvw0nNMHqJzeUftS/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1T6xysLS-F7UoJJDiA7DiIVoOu-OSGR6D/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Network Management
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Aviation–induced nitrogen oxide emissions and their effect on the energy budget of the Earth–atmosphere system</strong><br />
+        
+        Authors: <em>
+             Sabrina Groth, Judith Rosenow and Hartmut Fricke           &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/16jhhRwVtKd_kDeMStryhlMoKlWYBbXX5/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1lYIggmTdhZd1ASDQGOnWHfkN6EBya5EA/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Environment
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Probabilistic Analysis of Aircraft Fuel Consumption Using Ensemble Weather Forecasts</strong><br />
+        
+        Authors: <em>
+             Damian Rivas, Rafael Vazquez and Antonio Franco         &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1-UaAXANpBsNE078HmJK2nywvUxMtSVVm/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1jy4QLrTpI0DITJ6eiDnY4M38-QNNIZ94/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Environment
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>The potential of modern mobile technologies to improve airport operations – A concept for controlling passengers flows</strong><br />
+        
+        Authors: <em>
+             Nicolas Bontikous, Franziska Dieke–Meier and Hartmut Fricke       &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1hD_l3ATkx_dyS0SZKv1MMA3U5f3I_2TI/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1kRAgKGGS48hA9jS2mcgykXcfdeG4ZjAp/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Airport Design
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Implications of Autonomous Vehicles to Airport Terminal Planning and Design</strong><br />
+        
+        Author: <em>
+             Yu Zhang and Yuan Wang     &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1Pf3UXOSpFg2F0_ZLA5IljCtD3u6SofhS/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/13gnhJGSeH-fOKR-giBuzFoVu_SjH0iwL/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Airport Design
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>An Evaluation of Linear Length LED Centerline Taxiway Exit Light Systems</strong><br />
+        
+        Authors: <em>
+             Una Blanusa, Seth Young, Shawn Pruchnicki and Brian Strzempkowski    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/19ZCPRl2dueaUl7PdneAdoEFdFTd7su3w/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1QC0PHG8IbkPFmMqiF7Gls4TG5SiBa2E_/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Airport Design
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Configuration and Planning of the Remote Tower Modules in a Remote Tower Center</strong><br />
+        
+        Authors: <em>
+             Tobias Andersson, Peter Axelsson, Jonas Petersson, Tatiana Polishchuk, Valentin Polishchuk and Christiane Schmidt    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1fjuX1j5VaDx-LpGyMTO_vam_HQLUNsoc/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1ITWCy5cwDpf-jc3G_ixRql63J6mbUYul/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Airport Design
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Multi–agent Systems for Air Traffic Conflicts Resolution by Local Speed Regulation</strong><br />
+        
+        Authors: <em>
+             Romaric Breil, Daniel Delahaye, Laurent Lapasset and Eric Feron   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1cMCMk_wo8iWYBYZstAcddHu8Qav7RYX1/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1rbp2n0yIFxCNtgnIlr_kGgWXLK3Yl3gn/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Automation
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Unmanned Aviation: To Be Free or Not To Be Free?</strong><br />
+        
+        Authors: <em>
+             Vishwanath Bulusu, Raja Sengupta and Zhilong Liu    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1xVuizUkwKutgpfr_opPgSWbS9QrjCTUS/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1aDXmVNoDMKR99S0jmaf0wbe7v74tM3v2/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Automation
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Predicting Aircraft Descent Length with Machine Learning</strong><br />
+        
+        Authors: <em>
+             Richard Alligier, David Gianazza and Nicolas Durand    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1_-g4TQ7kF0JUii91E35eWP_egsiElvSH/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1LZByPwPwHDDxgJN3jqK2ujHDxVYGIKUr/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Automation
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>The Effect of Swarming on a Voltage Potential–Based Conflict Resolution Algorithm</strong><br />
+        
+        Authors: <em>
+             Jerom Maas, Emmanuel Sunil, Joost Ellerbroek and Jacco Hoekstra   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1u9Z9Wy2ApzXMH_onCfYcvAH2y_fxq506/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1x1z2q9MXVL76WRSUhc1sEX3BOpKprrkB/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Automation
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Evaluation of feasible machine learning techniques for predicting  the time to fly and aircraft speed profile on final approach</strong><br />
+        
+        Authors: <em>
+             Floris Herrema, Richard Curran, Vincent Treve and Dries Visser   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1Iq9YIRaRx4Uji8rJSOUGLZYUxPaCBatv/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1L9X9SNY9rUzLJ5HKXQ73hsTq611wcaic/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Why aircraft will fly more fuel–efficiently on FRIDAY – The FRIDAY route charges method</strong><br />
+        
+        Author: <em>
+             René Verbeek    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1XfoG_vaXxNHy0v65TIcsYjzIHyEDKiCq/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1XSi1yEz2VMiBHIErTj5x5N_yllPXt0Jf/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Modeling and Inferring Aircraft Takeoff Mass from Runway ADS–B Data </strong><br />
+        
+        Authors: <em>
+             Junzi Sun, Joost Ellerbroek and Jacco Hoekstra    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1hkz1VvsxrqolLiacrpRFvkyidjyGbJ3z/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1QMJQcJf2C0E_QJZnNT9rrp6RUviREef4/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>The Relationship Between Traffic Stability and Capacity for Decentralized Airspace </strong><br />
+        
+        Authors: <em>
+             Emmanuel Sunil, Jerom Maas, Joost Ellerbroek, Jacco Hoekstra and Martijn Tra   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1qmVxni9gEXKo_YRwzUW3-f9kb5rGqm6C/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1VMcY7-Z8IiecKMt2LhU-SlbYocHD5FKp/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Attention Distribution and Trust in Higher Levels of Automation within Air Traffic Control </strong><br />
+        
+        Author: <em>
+             Åsa Svensson   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1F9NafN6c8VeARV6nEVpd_tc6nckQNnhw/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1bAp2KGhxaSPrsIijqyS1I21YOzFXUFPV/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>On the correlations between air traffic and controller&#39;s eye movements </strong><br />
+        
+        Author: <em>
+             Yanjun Wang    &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1_0OWu2m6Xhrm_bMicoHrs-thzQXy6DWS/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1PBQbalRCSZQQOv9VfYz3ZHPTdBl9hc1A/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>A Case Study: With Public &amp; Private Sector Perceptions, New Ä°stanbul Airport Through PPP </strong><br />
+        
+        Author: <em>
+             Emrah Durmaz and Ãœnal Battal      &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1x8xZAuEdPA0syZYvCHgDbOayBi4v2b7B/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1h4jdr92nwWJQcywpERGNiklxYMH_pB36/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>General Aviation Runway Design Evaluation based on Aircraft Deviations from Runway Centerline</strong><br />
+        
+        Author: <em>
+             Eunsun Ryu and Seth Young          &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/16f049p3mpjGx_yfQWQ9nDpUz38dikZIc/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1rm3aV0gCaFOLFnOl0UdIrGjXqd5II7eV/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>A Fleet Management Algorithm for Automatic Taxi Operations</strong><br />
+        
+        Authors: <em>
+             Giuseppe Sirigu, Manuela Battipede, John–Paul Clarke and Piero Gili              &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1Re8a6J6wrUnuzSoS6UbXQWXOpaGTDk9J/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/18Iv9sRnbI9LJ8F14WQVmoOxyqeEfpEO6/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Impact of the Mt. Baekdu explosion to South Koreaâ€™s Air Transportation with hypothetical scenario</strong><br />
+        
+        Author: <em>
+             Jiseon Lee and Yoonjin Yoon               &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1tZswnNKiVPO--zzO1AXDbZyikwgCvCXt/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/16myL3eTcKMwC-STVRkq8-pVg3dPRvVPT/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  
+  <tr>
+    <td>
+    
+    <td>
+        <strong>Airborne–SLAM Approaches as Automation Techniques of Air Transportation</strong><br />
+        
+        Authors: <em>
+             Erol Duymaz, Abdullah Ersan Oguz and Hakan Temeltas   &nbsp;
+             </em><br /> 
+        
+    </td>
+
+    
+
+    
+    <td align="center">
+        <a href="https://drive.google.com/file/d/1us6B0HJls43DkEAxv25-VMyBoD08UwIt/view?usp=sharing" target="_blank"><img alt="pdf logo image" src="/static/images/large_pdf.gif" /></a>
+    </td>
+    
+
+    
+    
+    
+    <td align="center">
+            
+            <a href="https://drive.google.com/file/d/1QPBAaXjXVyoYdcv97dJvorTyqpXm-7eQ/view?usp=sharing"><img src="/static/images/large_pdf.gif" /></a>
+                
+    </td>
+    
+
+    
+    <td>
+     Doctoral
+    </td>
+    
+
+  </tr>
+  
+  </tbody>
+</table>
+
+
+<p><img src="../../static/images/best_paper.jpg"/> <em>This paper received the Best Paper Award within its theme.</em></p> 
+
+
+</div>
+
+
+
+                
+                
+                <p>
+                    <br/>
+                    
+                   
+                    
+              <img src="../../static/images/sponsor-banner-small.png" class="img-responsive" width="200" height="100"/>
+                </p>
+            </div>
+            
+        </div>
+        <!-- /.row -->
+
+        
+
+       
+        <!-- /.row -->
+
+    
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright &copy; ICRAT 2020</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+
+
+
+</body>
+
+</html>
