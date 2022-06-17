@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Accommodations</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="International Conference on Research in Air Transportation">
+    <meta name="keywords" content="aviation, aircraft, safety, flight efficiency, trajectory management, airport, aerodrome, operation research, optimization, machine learning">
+    <meta name="author" content="EUROCONTROL, FAA">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../../static/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="../../../static/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../../../static/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="../../../static/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../../static/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../../static/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../../../static/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        .page-loading.active > .page-loading-inner {
+            opacity: 1;
+        }
+        .page-loading-inner > span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        .dark-mode .page-spinner {
+            border-color: rgba(255,255,255,.4);
+            border-right-color: transparent;
+        }
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+	
+</head>
+
+<body>
+
+<!-- Page loading spinner -->
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+</div>
+
+
+
+<!-- Navigation -->
+
+
+<!-- Navbar -->
+<header class="header navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container px-3">
+        <a href="../../../" class="navbar-brand pe-3">
+            <img src="../../../static/img/header-globe.png" width="47" alt="ICRAT">
+            ICRAT
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Upcoming Conference</a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="../../../upcoming-conference/">All Upcoming Conference Information</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../upcoming-conference/local-attractions/">Tampa Area Local Attractions</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../upcoming-conference/registration/">ICRAT 2022 Registration</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../upcoming-conference/call-for-papers/">Call for Papers: ICRAT 2022</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../upcoming-conference/hotel/">Hotel Information</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../upcoming-conference/sponsorship/">Sponsorship Opportunities</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../#about" class="nav-link" data-scroll>About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../#schedule" class="nav-link" data-scroll>Schedule</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../#committee" class="nav-link" data-scroll>Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../#venue" class="nav-link" data-scroll>Venue</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Previous Conferences</a>
+
+                        <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="../../../previous-conferences/9th-international-conference/" class="dropdown-item">ICRAT 2020 - 9th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/8th-international-conference/" class="dropdown-item">ICRAT 2018 - 8th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/7th-international-conference/" class="dropdown-item">ICRAT 2016 - 7th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/6th-international-conference/" class="dropdown-item">ICRAT 2014 - 6th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/5th-international-conference/" class="dropdown-item">ICRAT 2012 - 5th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/4th-international-conference/" class="dropdown-item">ICRAT 2010 - 4th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/3rd-international-conference/" class="dropdown-item">ICRAT 2008 - 3rd International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/2nd-international-conference/" class="dropdown-item">ICRAT 2006 - 2nd International Conference</a>
+                         </li>
+                        
+                        <li><span class="dropdown-item disabled">ICRAT 2004 - 1st International Conference</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="offcanvas-footer border-top">
+                <a href="../../../upcoming-conference/registration/" class="btn btn-primary w-100">Registration</a>
+            </div>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="../../../upcoming-conference/registration/" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+            Registration
+        </a>
+    </div>
+</header>
+
+
+<main class="page-wrapper">
+
+<!-- Breadcrumb -->
+<nav class="container position-relative px-0 pt-5 mt-5 mb-1" aria-label="breadcrumb">
+    <ol class="breadcrumb pt-lg-3 mb-0">
+        <li class="breadcrumb-item"><i class="bx bx-home-alt fs-lg me-1"></i></li>
+        
+        <li class="breadcrumb-item ">
+        
+          <a href="../../../">ICRAT</a>
+        
+        </li>
+        
+        <li class="breadcrumb-item ">
+        
+          <a href="../../../previous-conferences/">Previous Conferences</a>
+        
+        </li>
+        
+        <li class="breadcrumb-item ">
+        
+          <a href="../../../previous-conferences/8th-international-conference/">8th International Conference on Research in Air Transportation</a>
+        
+        </li>
+        
+        <li class="breadcrumb-item  active ">
+        
+            Accommodations
+        
+        </li>
+        
+    </ol>
+</nav>
+
+<section class="container">
+    <h1 class="text-center">Accommodations</h1>
+
+  <p><strong>Where to stay</strong></p>
+<p>Our first recommendation is to stay in <strong>Castelldefels </strong>and chose a hotel or apartment at a walking distance from the campus. The gala dinner will be organized in Barcelona and some transfer buses will be arranged from the conference venue. &nbsp;</p><p>Staying in <strong>Barcelona</strong> could also be an option, but we recommend you to look for accommodation close to one of the train stations with direct trains to Castelldefels in order to reduce commuting time. <strong>Sitges</strong> would be also another option for those looking to stay into a typical Mediterranean coastal town. The commuter train from Barcelona or Sitges takes around 25 minutes to Castelldefels. Then you have a 10-minute walk to the UPC campus <a href="../transportation">(see how to reach the UPC campus information).</a></p><p>There are a lot of options in the 3 cities. However, end of June is peak season in Catalonia, with many events going on besides tourist travelers. <strong>Our recommendation is to book your hotel as soon as possible since rooms fill up very quickly and/or might get very expensive!!!</strong></p><p>We have secured a limited number of rooms at a fixed rate in three hotels in <strong>Castelldefels:</strong></p><p></p><p>For students, we have secured a limited number of rooms at the UPC campus residence:</p>
+<p><strong><a href="https://www.resa.es/en/residences/castelldefels/residence-hall-pius-font-i-quer/residence/">Residencia Pius Font i Quer [2&rsquo; walk]</a></strong></p>
+<p>In each room two students will be accommodated.
+<p>The price is 152 Euro for 4 nights (Monday to Thursday, Friday not included), with VAT included. 
+<p>For reservations write an e-mail to <a href="mailto:raul.saez.garcia@upc.edu">raul.saez.garcia@upc.edu</a> with subject "ICRAT2018 Dorms (participant family name)" and with the following information:</p>
+<p>
+<ul>
+<li>Given name:</li>
+<li>Family name:</li>
+<li>Gender:</li>
+<li>Would you with to share the room with another colleague also registered in the ICRAT2018 conference? If yes, please provide his/her Given+Family names.</li>
+</ul>
+</p><p><strong><a href="http://www.ibis.com/gb/hotel-3208-ibis-barcelona-castelldefels/index.shtml">Hotel IBIS Castelldefels ** [20&rsquo; walk]</a></strong></p>
+<p>Double room single occupancy with breakfast: 60 Eur</p>
+<p>Double room with breakfast: 65 Eur</p>
+<p>For reservations write to <a href="mailto:H3208-GM@accor.com">H3208-GM@accor.com</a> and use this promotional code: ICRAT-2018</p><p><strong><a href="http://en.hotelciudaddecastelldefels.com/">Hotel Ciutat de Castelldefels *** [25&rsquo; walk]</a></strong></p>
+<p>Double room single occupancy with breakfast: 118 Eur</p>
+<p>Double room with breakfast: 138 Eur</p>
+<p><a href="Booking-Reservations%20PLAYAFELS%20%20%20CIUDAD%20DE%20CASTELLDEFELS.doc"><em>Use this reservation form.</em></a></p><p><strong><a href="http://www.hotelplayafels.com/">Hotel Playafels **** [30&rsquo; walk]</a></strong></p>
+<p>Double room single occupancy with breakfast: 135 Eur</p>
+<p>Double room with breakfast: 155 Eur</p>
+<p><a href="Booking-Reservations%20PLAYAFELS%20%20%20CIUDAD%20DE%20CASTELLDEFELS.doc"><em>Use this reservation form.</em></a></p><p>Below we also provide some other recommendations and obviously, feel free to choose the accommodation that suits best your needs using portals such as booking or Airbnb.</p><p><strong>Castelldefels:</strong></p>
+<p>This is the city where the conference is held. It is a Mediterranean city 20 km southwest of Barcelona, famous for its long beach (more than 5 km), where you can do water sports, bathe in its calm waters sunbathe, or just peacefully stroll along the shoreline. Some of the available hotels in Castelldefels are the following:</p><p><strong><em>Close to the university (15-20 minute walk):</em></strong></p>
+<p><em>Hotel Pitort ** - </em>Passeig Pitort, 170</p>
+<p>Hotel Flora Parc *** - Av. Constituci&oacute;n n&ordm;44,</p>
+<p><strong>&nbsp;</strong></p>
+<p><strong><em>Close to the beach (25-35 minute walk to the UPC campus)</em></strong></p>
+<p><em>Best Western Hotel Mediterraneo **** &nbsp;- </em>Pg. Mar&iacute;timo 294,</p>
+<p><em>Ciudad de Castelldefels*** &ndash; Pg.</em> de la Marina, 212</p>
+<p><em>Hotel Boutique dONNA **** Superior &ndash; Pg. Mar&iacute;tim 171</em></p><p>For more information about accommodation and what to do in Castelldefels, visit the following website: <a href="http://castelldefelsturismo.com/en/">http://castelldefelsturismo.com/en/</a></p><p><img class="img-responsive" src="beach.jpg"/></p>
+<p><strong>Barcelona:</strong></p>
+<p>If you prefer to stay in Barcelona, our strong recommendation is to stay close to one of the train stations with direct trains to Castelldefels <a href="../transportation">(see how to reach the UPC campus information). </a></p><p>You will find more interesting places to see if staying close to &ldquo;Barcelona-Passeig de Gr&agrave;cia&rdquo; or &ldquo;Barcelona-Estaci&oacute; de Fran&ccedil;a&rdquo;. Some recommendations are the following:</p><p><strong>Close to Barcelona-Passeig de Gr&agrave;cia</strong></p>
+<p><em>Onix Rambla - </em>Rambla Catalunya, 24</p>
+<p><em>El Avenida Palace - </em>Gran Via, 605</p>
+<p><em>Praktik Vinoteca - </em>Balmes, 51</p>
+<p><em>HCC Taber - </em>Arag&oacute;, 256,</p>
+<p><em>Catalonia Eixample 1864 - </em>Roger de Ll&uacute;ria, 60</p><p><strong>Close to Barcelona-Estaci&oacute; de Fran&ccedil;a</strong></p>
+<p><em>Park Hotel &ndash; Av. </em>Marques de Argentera, 11</p>
+<p><em>Barcelona Hotel Colonial - </em>Via Layetana, 3</p>
+<p><em>Ciutat de Barcelona - </em>Princesa, 33-35,</p><p>For more information about accommodation and what to do in Barcelona, visit the following website: <a href="http://www.barcelonaturisme.com/wv3/en/"><strong>http://www.barcelonaturisme.com/wv3/en/</strong></a></p><p><img class="img-responsive" src="barcelona.jpg"/></p>
+<p><strong>Sitges: </strong></p>
+<p>Sitges is a Mediterranean coastal town sheltered by the Garraf mountains and due to its geographical position in the Mediterranean, it has a warm "micro-climate" that makes it possible to enjoy outdoor activities almost every day of the year.</p><p>Some of the available hotels in Sitges are the following (all of them are within walking distance of the train station (aprox. 10-minute walk):</p><p><em>Albenti Sitges Hotel &amp; Restaurant - L</em>&rsquo;U de Maig del 1838, 19,</p>
+<p><em>Hotel Celimar - </em>Pg. de La Ribera, 20</p>
+<p><em>Hotel Liberty - </em>Isla de Cuba, 45</p>
+<p><em>Hotel La Ni&ntilde;a &ndash; Pg. </em>de la Ribera, 65-68,</p>
+<p><em>La Santa Mar&iacute;a &ndash; Pg. De la</em> Ribera, 52,</p><p>For more information about accommodation and what to do in Sitges, visit the following website: <a href="http://www.visitsitges.com/en/">http://www.visitsitges.com/en/</a></p><p><strong>Other options:</strong></p>
+<p>Staying in the towns of Gav&agrave;, Viladecans, El Prat de Llobregat or close to Barcelona&rsquo;s airport, would also be an option if you have difficulties to find accommodation in Castelldefels. The commuter train from Barcelona stops there before reaching Castelldefels.</p><p><img src="../2018_boeing_sponsor.png" class="img-responsive"/></p>
+
+  
+</section>
+
+</main>
+
+
+
+
+<!--fieldset>
+        <h3>2022 ICRAT Sponsors</h3>
+
+        <a href="https://www.faa.gov"><img src="../../../static/images/faa_logo_seal.svg" class=img-responsive" width="150" height="150"/></a>
+        <a href="https://www.eurocontrol.int"><img src="../../../static/images/eurocontrol_logo.svg" style="margin-top:5px; margin-bottom:5px;" class=img-responsive" width="150" height="150"/></a>
+        <a href="https://www.usf.edu/research-innovation/"><img src="../../../static/images/2022/usf_ri_small.png" style="margin-top:5px; margin-bottom:5px;" class=img-responsive"/></a><br/>
+        <a href="https://www.tampaairport.com/"><img src="../../../static/images/2022/tia_ga_logo_medium.jpg" widclass="img-responsive"/></a>
+        <a href="https://www.cutr.usf.edu"><img src="../../../static/images/2022/cutr-circle-with-text-small.jpg" widclass="img-responsive"/></a>
+
+</fieldset -->
+
+
+<!-- Footer -->
+<footer class="footer dark-mode bg-info pt-5 pb-4 pb-lg-5">
+    <!-- we don't include sponsors on landing page -->
+     
+<!-- Sponsors -->
+<div class="container pt-1 pt-md-2 pb-lg-2 pt-lg-4">
+    <h2 class="h3 text-light text-center text-lg-start mb-4 mb-lg-5">ICRAT 2022 Sponsors:</h2>
+    <div class="swiper ms-xxl-n5 me-xxl-n4" data-swiper-options='{
+    "slidesPerView": 2,
+    "spaceBetween": 24,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "breakpoints": {
+      "500": {
+        "slidesPerView": 3
+      },
+      "650": {
+        "slidesPerView": 4
+      },
+      "900": {
+        "slidesPerView": 5
+      },
+      "1100": {
+        "slidesPerView": 6
+      }
+    }
+  }'>
+        
+        <div class="swiper-wrapper align-items-center">
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://eurocontrol.int">
+                <img src="../../../static/img/ec-mono-white.png" class="d-block py-3 mx-auto" width="100" alt="EUROCONTROL">
+                </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.faa.gov/">
+                <img src="../../../static/img/faa.png" class="d-block py-3 mx-auto" width="100" alt="Federal Aviation Administration">
+                </a>
+            </div>
+
+            
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.usf.edu/research-innovation/">
+                <img src="../../../static/img/sponsors/2022/usf_ri_small.png" class="d-block py-3 mx-auto" width="154" alt="University of South Florida Research &amp; Innovation">
+                </a>
+            </div>
+
+            
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.tampaairport.com/">
+                <img src="../../../static/img/sponsors/2022/tia_ga_logo_medium.png" class="d-block py-3 mx-auto" width="154" alt="Tampa International Airport">
+                </a>
+            </div>
+
+            
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.cutr.usf.edu/">
+                <img src="../../../static/img/sponsors/2022/cutr-circle-with-text-small.png" class="d-block py-3 mx-auto" width="154" alt="Center for Urban Transportation Research">
+                </a>
+            </div>
+
+            
+
+        </div>
+
+        <!-- Pagination (bullets) -->
+        <div class="swiper-pagination dark-mode position-relative pt-2 mt-4"></div>
+    </div>
+</div> 
+    <div class="container text-center pt-lg-3">
+        <!-- do we want to do small sponsor logos on the bottom? -->
+        <!--div class="d-flex align-items-center justify-content-center mb-3">
+            <div class="navbar-brand text-dark mx-4">
+                <img src="../../../static/img/header-globe.png" class="me-2" width="60" alt="ICRAT">
+                <span class="fs-4">ICRAT</span>
+            </div>
+            <div class="mx-4">
+                <img src="../../../static/img/ec-mono-white.png" width="60" alt="EUROCONTROL">
+            </div>
+            <div class="mx-4">
+                <img src="../../../static/img/faa.png" width="60" alt="FAA">
+            </div>
+        </div -->
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+            <li class="nav-item"><a href="../../../#top" class="nav-link" data-scroll>Home</a></li>
+            <li class="nav-item"><a href="../../../upcoming-conference/" class="nav-link" data-scroll>Upcoming conference</a></li>
+            <li class="nav-item"><a href="../../../#about" class="nav-link" data-scroll>About</a></li>
+            <li class="nav-item"><a href="../../../#schedule" class="nav-link" data-scroll>Schedule</a></li>
+            <li class="nav-item"><a href="../../../#committee" class="nav-link" data-scroll>Committee</a></li>
+            <li class="nav-item"><a href="../../../#venue" class="nav-link" data-scroll>Venue</a></li>
+        </ul>
+        <p class="fs-sm text-center pt-4 mt-lg-4 mb-0">
+            <span class="text-light opacity-50">&copy; All rights reserved. ICRAT 2022</span>
+        </p>
+    </div>
+</footer>
+
+
+<!-- Back to top button -->
+<a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+</a>
+
+
+<!-- Vendor Scripts -->
+<!--script src="../../../static/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js" integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--script src="../../../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script-->
+
+<!--script src="../../../static/vendor/swiper/swiper-bundle.min.js"></script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="../../../static/vendor/lightgallery/lightgallery.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js" integrity="sha512-FDbnUqS6P7md6VfBoH57otIQB3rwZKvvs/kQ080nmpK876/q4rycGB0KZ/yzlNIDuNc+ybpu0HV3ePdUYfT5cA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script-->
+
+<script src="../../../static/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lg-zoom/1.3.0/lg-zoom.min.js" referrerpolicy="no-referrer"></script-->
+
+<script src="../../../static/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.2.1/lg-fullscreen.min.js" integrity="sha512-GvMYZx1AUxtd+OYSc33H9DYX9qeT/OY90+O8kJ65cLXvSelNSgeytaxDV8bY58TeoZxz1HiqgAfpchczH7S8qA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script-->
+
+<script src="../../../static/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lg-video/1.4.0/lg-video.min.js" referrerpolicy="no-referrer"></script-->
+
+<!-- Main Theme Script -->
+<script src="../../../static/js/theme.min.js"></script>
+
+
+</body>
+
+</html>
