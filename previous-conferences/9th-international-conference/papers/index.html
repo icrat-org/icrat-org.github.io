@@ -1,0 +1,2469 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>ICRAT 2020 Technical Papers &amp; Presentations</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="International Conference on Research in Air Transportation">
+    <meta name="keywords" content="aviation, aircraft, safety, flight efficiency, trajectory management, airport, aerodrome, operation research, optimization, machine learning">
+    <meta name="author" content="EUROCONTROL, FAA">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../static/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../static/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../static/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../../../static/favicon/site.webmanifest">
+    <link rel="shortcut icon" href="../../../static/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../../../static/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="../../../static/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../../static/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="../../../static/vendor/lightgallery/css/lightgallery-bundle.min.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../../../static/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        .page-loading.active > .page-loading-inner {
+            opacity: 1;
+        }
+        .page-loading-inner > span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        .dark-mode .page-spinner {
+            border-color: rgba(255,255,255,.4);
+            border-right-color: transparent;
+        }
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+	
+</head>
+
+<body>
+
+<!-- Page loading spinner -->
+<div class="page-loading active">
+    <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+    </div>
+</div>
+
+
+
+<!-- Navigation -->
+
+
+<!-- Navbar -->
+<header class="header navbar navbar-expand-lg navbar-light bg-light shadow-sm fixed-top">
+    <div class="container px-3">
+        <a href="../../../" class="navbar-brand pe-3">
+            <img src="../../../static/img/header-globe.png" width="47" alt="ICRAT">
+            ICRAT
+        </a>
+        <div id="navbarNav" class="offcanvas offcanvas-end">
+            <div class="offcanvas-header border-bottom">
+                <h5 class="offcanvas-title">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="../../../upcoming-conference/" class="nav-link">Upcoming Conference <br/>ICRAT 2024</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        
+                        
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="../../../previous-conferences/10th-internation-conference"></a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        
+                        
+                        <a href="../../../previous-conferences/10th-international-conference/" class="nav-link dropdown-toggle"  data-bs-toggle="dropdown">Latest Conference ICRAT 2022</a>
+                        
+                        <ul class="dropdown-menu">
+                            <li><a  class="dropdown-item" href="../../../previous-conferences/10th-international-conference/">All Latest Conference ICRAT 2022 Information</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../previous-conferences/10th-international-conference/papers/">ICRAT 2022 Technical Papers</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../previous-conferences/10th-international-conference/hotel/">Hotel Information</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../previous-conferences/10th-international-conference/call-for-papers/">Call for Papers: ICRAT 2022</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../previous-conferences/10th-international-conference/sponsorship/">Sponsorship Opportunities</a></li>
+                            
+                            <li><a  class="dropdown-item" href="../../../previous-conferences/10th-international-conference/local-attractions/">Tampa Area Local Attractions</a></li>
+                            
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../#about" class="nav-link" data-scroll>About</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="../../../#committee" class="nav-link" data-scroll>Committee</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../../../#venue" class="nav-link" data-scroll>Venue</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Previous Conferences</a>
+
+                        <ul class="dropdown-menu">
+                        
+                        
+                        <li>
+                            <a href="../../../previous-conferences/10th-international-conference/" class="dropdown-item">ICRAT 2022 - 10th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/9th-international-conference/" class="dropdown-item">ICRAT 2020 - 9th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/8th-international-conference/" class="dropdown-item">ICRAT 2018 - 8th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/7th-international-conference/" class="dropdown-item">ICRAT 2016 - 7th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/6th-international-conference/" class="dropdown-item">ICRAT 2014 - 6th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/5th-international-conference/" class="dropdown-item">ICRAT 2012 - 5th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/4th-international-conference/" class="dropdown-item">ICRAT 2010 - 4th International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/3rd-international-conference/" class="dropdown-item">ICRAT 2008 - 3rd International Conference</a>
+                         </li>
+                        
+                        <li>
+                            <a href="../../../previous-conferences/2nd-international-conference/" class="dropdown-item">ICRAT 2006 - 2nd International Conference</a>
+                         </li>
+                        
+                        <li><span class="dropdown-item disabled">ICRAT 2004 - 1st International Conference</span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="offcanvas-footer border-top">
+                <a href="../../../upcoming-conference/registration/" class="btn btn-primary w-100">Registration</a>
+            </div>
+        </div>
+        <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+    </div>
+</header>
+
+
+<!-- Breadcrumb -->
+<nav class="container position-relative px-0 pt-5 mt-5 mb-1" aria-label="breadcrumb">
+    <ol class="breadcrumb pt-lg-3 mb-0">
+        <li class="breadcrumb-item"><i class="bx bx-home-alt fs-lg me-1"></i></li>
+        
+        <li class="breadcrumb-item ">
+        
+          <a href="../../../">ICRAT</a>
+        
+        </li>
+        
+        <li class="breadcrumb-item ">
+        
+          <a href="../../../previous-conferences/">Previous Conferences</a>
+        
+        </li>
+        
+        <li class="breadcrumb-item ">
+        
+          <a href="../../../previous-conferences/9th-international-conference/">9th International Conference on Research in Air Transportation</a>
+        
+        </li>
+        
+        <li class="breadcrumb-item  active ">
+        
+            ICRAT 2020 Technical Papers &amp; Presentations
+        
+        </li>
+        
+    </ol>
+</nav>
+
+  <h1 class="text-center mb-5">ICRAT 2020 Technical Papers &amp; Presentations</h1>
+  
+  
+
+
+  <section class="container mb-lg-4 py-5">
+  <div><p>
+      <img src="../../../static/img/google_drive_icon.svg" width="40" height="40" class="img-responsive"/>Note: All seminar content is provided on Google Drive. <br/>
+      If you have any issues accessing these files, please ensure you are able to first access Google Drive.
+      <p>
+  </div>
+  </section>
+
+
+
+
+
+
+
+    <div class=" bg-secondary ">
+    <section class="container mb-lg-4 py-5">
+        <h2 class="text-center">Accepted Papers</h2>
+
+        
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(24.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(24.0, 50%, 50%) !important">
+                    Human Performance 
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Investigation of Relationship Between Trust in Automation and Human Personality Traits Among Air Traffic Controllers
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Doroteja Timotic, Fedja Netjasov and Svetlana Cicevic &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/11Tg9sU4HMaygoD5yS2GXXdzi7QH4Cwuq/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1Vo4ZeAyO0GsBWey3wtLVvMyuTdSJ7yqz/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(48.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(48.0, 50%, 50%) !important">
+                    Decision Support 
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Solution Space Design for Continuous Descent Operations under Prediction Uncertainties
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Shumpei Kamo, Judith Rosenow and Hartmut Fricke &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1ZjXYUwKJS97ivfTyCTaaQ348eLqCA6rC/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Predicting the Propagation of Trajectory Uncertainty during Climb
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Thomas Zeh, Judith Rosenow, Hartmut Fricke, and Richard Alligier &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Bct8YZOQYTvHWRdTTwW_PhmZy7l7frmh/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(72.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(72.0, 50%, 50%) !important">
+                    System Performance  
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Deep Trajectory Clustering with Autoencoders
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Xavier Olive, Luis Basora, Benoît Viry and Richard Alligier &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1orH7ldWSaWx0APNKRwJe_IQDBlEObTU3/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1Zdo6MZ7CISDlUQmzQwIM9H2eQCwr-t0W/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        What’s the Relationship Between Aircraft Taxi Speed and its Pollutant Emissions?
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Lijun Zheng, Rong Hu, Junfeng Zhang and Jialin Zhu &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1HPZXs6_mtShaVmRaQjUKA0iJM06sQt3m/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1v95fRIRdAdzjdYgbYTPdifDNuWxeTitn/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        A Collision Risk Assessment Method for Runway Threshold Management: A Case Study of Singapore Changi Airport
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Haojie Ang, Qing Cai and Sameer Alam &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Y19NfSF9mFpOy6OJ5fn0PQy0p_xIPNfY/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Identification of Significant Impact Factors on Arrival Flight Efficiency within TMA
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Anastasia Lemetti, Tatiana Polishchuk, Valentin Polishchuk, Raúl Sáez and Xavier Prats &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1YLl7bWiSW26vQz7tyjqX83UTd0qVuh3o/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1tYS20MsZM1CGiz0XD4EtQddHc02WH2QS/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Capacity Management based on the Integration of Dynamic Airspace Configuration and Flight Centric ATC solutions using Complexity
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Marc Melgosa, Leïla Zerrouki, Predrag Terzioski, Pol Olivella and Andrija Vidosavljevic &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1pgj0JDTohEAtOzQ5qg92aZzi5gYLxcVv/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1TFASXkRz4Cgptjp332VKh1xoxXEBtzqK/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Validation of Controller Workload Predictors at Conventional and Remote Towers
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Billy Josefsson, Lothar Meyer, Maximilian Peukert, Tatiana Polishchuk and
+Christiane Schmidt &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1O5AjdYqT5QzdYngpxDEffUI-xyozYSzr/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                        <a href="https://youtu.be/fOpUgmaHaPw" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Predicting Aircraft Landing Time in Extended-TMA using Machine Learning Methods
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Imen Dhief, Zhengyi Wang, Man Liang, Sameer Alam, Michael Schultz and Daniel Delahaye &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1zz8pbgZ0SFzfxYyhAHc9MlOamkd_9RD7/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1zeHZf_XoxahrQw_Doc3jEm9Hf9pI6DhH/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Trajectory Clustering of Inbound Aircraft based on Feature Representation and Selection
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Zihan Peng, Junfeng Zhang, Xuhao Gui, Rong Hu and Dong Sui &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1RRbmf28x88U1UtT8NQqWCsGxonFSEGa1/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1LcCPAjDKtftFWhe7cNeteJUOWm5UkagV/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Dynamics of Disruption and Recovery in Air Transportation Networks
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Max Z. Li, Karthik Gopalakrishnan, Hamsa Balakrishnan, Sang Shin, Darsh Jalan, Aritro Nandi and Lavanya Marla &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1JlbVDC3IscpoBsGiggO1Y4kNiSey-Im-/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Flightpath 2050 door-to-door travel time goal: A comparative study on Europe and China
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Pengfei Yia, Sebastian Wandelta and Xiaoqian Suna &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1-TRpEasAfPQcIzQfovo5LhQ3p_Oql97U/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1d1ur2CopaIhOF23uYhq6J9fR2iBtgvjl/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Macroscopic Fundamental Diagram for Air Traffic: Preliminary Theoretic Results and Simulation Findings
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Ivan Tereshchenko, Mark Hansen and Bo Zou &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1xj--BaIK13vN_28shj6thkzbKEp9-bl2/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1eE8_KzYhsq8E-2QSrV5iuoPSDtl9SAWt/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(96.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(96.0, 50%, 50%) !important">
+                    Automation and Air Vehicle Integration
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Full-scale Pre-Tactical Route Prediction
+Machine Learning to increase pre-tactical demand forecast accuracy
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Manuel Mateos, Ignacio Martín,
+Pedro García, Ricardo Herranz, Oliva García Cantú-Ros and Xavier Prats &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1lS7IE3Stwfv3L6sbuTJBg9HQWrKe647Q/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1Ic5r6T126ZdPzgI5BUQTKYgyPy_Dm6di/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Assessment of Optical Markers for On-Board Autonomous Localization of eVTOLs during Landing
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Finn Hübner, Stephan Wolkow, Andreas Dekiert, Maik Angermann and Ulf Bestmann &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1jc9eeFTXHK8e7Vns8I8WWOjdnEJCCdKs/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1wcXoGbQ5XVkQ5s_kSAX1o0E9XozFAI2o/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        The Effect of Intent on Conflict Detection and Resolution at High Traffic Densities
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Marta Ribeiro, Joost Ellerbroek and Jacco Hoekstra &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/12md4cYEB4qVGDL2YRFXj2TaRzLwzX-xa/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/15Y1UwkepumIdDin-FEwse65zBv5uLRKv/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        An Autonomous Free Airspace En-route Controller using Deep Reinforcement Learning Techniques
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Joris Mollinga and Herke van Hoof &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1VQadOJUKEhD83je2nJT60l8WfWNWcJ8C/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1eYjhvWTltw0QVcckBztkqMqrsXzPuEwD/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        A two-stage algorithm for aircraft conflict resolution with trajectory recovery
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Fernando H. C. Dias, Stephanie Rahme and David Rey &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1yECF5zpFOQkeqMn4yZxL2UnU1aG3Eiiz/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/19gxKW1YK_blLDxVqkpVEcl2S-HiF1Q6h/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Segmentation of Low-altitude Airspace in Highly Constrained Environments
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Jungwoo Cho and Yoonjin Yoon &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1kbCYYYahVqSTthe5rAaJh5lfu9nffHl-/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(120.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(120.0, 50%, 50%) !important">
+                    Environment and Energy Efficiency 
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Detecting and Measuring Turbulence from Mode S Surveillance Downlink Data
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Xavier Olive and Junzi Sun &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1CU90UaM0tpWc_1T1uqTNz3XDcp2VOwhc/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1ttNd71bqZsF2tY5h8hMnYfyIpx9TzfXq/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        FPCA applied to flight paths optimization
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Lucas Ligny &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1ojR_0LrdeFZ7GfWeRu5LEn9ZRkEh8m4h/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1Iu1bPNRekDm7dVcrKfocKygu4DwQmhm7/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(144.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(144.0, 50%, 50%) !important">
+                    Fuel and Emissions
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Comparison of Fuel Consumption of Continuous Descent Operations with Required Times of Arrival
+Path Stretching vs. Powered Descents
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Raúl Sáez and Xavier Prats &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/19zN2-rfkAeYRae-n8RAWOoc-MqhiH-Ml/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1PMXYxZ-C6BCzSAtY_HNX_pLIpeNSBVmR/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(168.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(168.0, 50%, 50%) !important">
+                    Trajectory Management and Operations 
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Morphing STARs vs drones and weather in TMA
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Henrik Hardell, Vishwanath Bulusu, Anastasia Lemetti, Tatiana Polishchuk, Valentin Polishchuk and Enric Royo  &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/134GGgJFeb3Tt4X0cRa_9NAR7g6pBofxy/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1bb3Z6WfqTdVz2MnFZDn5-2iQi29ungid/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Coupling Mathematical Optimization and Machine Learning for the Aircraft Landing Problem
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Sana Ikli, Catherine Mancel, Marcel Mongeau, Xavier Olive, and Emmanuel Rachelson &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Hoqq_nc6j7_9QSevfK7SsM4Tn9FGBa71/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1t1ollfV4epZImcKcsnSYAJvVc9xYBokO/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Short-Term Trajectory Prediction Using Generative Machine Learning Methods
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Thanh-Ha Le, Phu N. Tran, Duc-Thinh Pham, Michael Schultz and Sameer Alam &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1elWVNextgsYxjy5fOTkkcRml4lcO5FwJ/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1M-UjC19mNSBmEoesUDmNsfcYsJdUMAtM/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Obstacle Clustering and Path Optimization for Drone Routing
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Ang Li and Mark Hansen &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1RWEjm203m570WzRa6-tCf5bNJ-Lu4hAx/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1XmjHXXl2pmoykOPyMGV95G0PB7dsGD9b/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Analysis and Design of Trajectory-Based Operations under Wind Forecast Uncertainty
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Dun Yuan Tan, Sandeep Badrinath and Hamsa Balakrishnan &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1EFtFXQRXgzySckKy0uTKQ6p2S0Obp02u/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                        <a href="https://youtu.be/5wj7zYMQxuM" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Aircraft Flight Plan Optimization with Dynamic Weather and Airspace Constraints
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Coline Ramée, Junghyun Kim, Marie Deguignet, Cedric Justin, Simon Briceno, and Dimitri Mavris &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1mwTYH6a7QU0-XPOSh-QmwMzBaBDgEIa0/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1rjIukZyQdMU4RTAAYObzafM_imLGYw7P/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Probabilistic 4D Flight Planning in Structured Airspaces through Parallelized Simulation on GPUs
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Daniel González Arribas, Eduardo Andrés-Enderiz, Manuel Soler, Aniel Jardines and Javier García-Heras &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1prx0fQLJ-SlGuHUIBkVpCEbcYeaAoM95/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1loT5v6iMkMzIbXI4LMJjvPZM14S6KOFn/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(192.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(192.0, 50%, 50%) !important">
+                    Advanced Modeling
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Interactive Trajectory Modification and Generation with FPCA
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Gabriel Jarry, Almoctar Hassoumi, Daniel Delahaye and Christophe Hurter &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Dj0ZcjZpRF1K9b-Kd5TjIy_94RbfKmzG/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                        <a href="https://youtu.be/hsrsxUWiJ00" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Resilient Arrival Runway Occupancy Time prediction for decision-making tool in Barcelona (LEBL) airport
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Miguel García Martínez, Javier García Moreno, Rubén González Sendino and Álvaro Rodríguez Sanz &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1hCDJ3XZ62UkpiY47ULZOzxpSM-bR1cqX/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1AJmJ9K88BV8dlBmsePH045_ist2xe6Sm/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Comparative Analysis of Machine Learning and Statistical Methods for Aircraft Phase of Flight Prediction
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Stephen Kovarik, Liam Doherty, Kiran Korah, Brian Mulligan, Ghulam Rasool, Yusuf Mehta, Parth Bhavsar and Mike Paglione &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1G-SFX67q6OOvQws4tPCo3ARg4wAuyjjD/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1zMRL2HMdmSQm8pWkDcN1dr7wKDoScUBF/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Taxi-speed Prediction by Spatio-Temporal Graph-based Trajectory Representation and Its Applications
+
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Thanh-Nam Tran, Duc-Thinh Pham, Sameer Alam and Vu Duong &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1YhR3_0Qmkwv4crbuG1wtzmn2rv431oVZ/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1nTZVJq3Z0H7m2R8oyHvDC3S_2p-5ypKT/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Model Generalization in Arrival Runway Occupancy Time Prediction by Feature Equivalences
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                An-Dan Nguyen, Duc-Thinh Pham, Nimrod Lilith and Sameer Alam &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/17XYUHQsYt9ruZ4SJ1AYPMFvjaW_5vFXg/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1pAoDojP5oz7L5iwFld-v-GZjMludLrKu/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Probabilistic Prediction of Time To Fly using Quantile Regression Forest
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Stanley Förster, Michael Schultz and Hartmut Fricke &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1SitPCZDefLjDtUsm1ey65i1sif5LJ6zA/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1YoUsknjmq1mLAfzvPnS78gMycJ-nyQZj/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        In-flight aircraft trajectory optimization within corridors defined by ensemble weather forecasts
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Martin Lindner, Judith Rosenow, Thomas Zeh and Hartmut Fricke &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1ZGV36vwztuoW65y4a7k0HZ_zaWvA8a_V/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Categorizing Flight Paths using Data Visualization and Clustering Methodologies
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Yifan Song, Keyang Yu and Seth Young &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1KfJYK8xqLsOc5Fdw9XpBkUWop6cmbCNj/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1idTgxCPsh7wX55PbXkg8r19xCeFC1Cy5/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=21FqI9Mb6zI" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Predicting Go-around Occurrence with Input-Output Hidden Markov Model
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Lu Dai, Yulin Liu and Mark Hansen &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1CVC9PfJiS_EiCJRoOYWCezoNRhQDQtuR/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                        <a href="https://youtu.be/UwjIJBr7AIY" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        En-route Arrival Time Prediction using Gaussian Mixture Model
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Hyunjin Paek, Keumjin Lee and Adan Ernesto Vela &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Rv4DYSRY3TVYj6U1f1JyM9PZTwDNMyEg/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/191ACSefUoeEtl0yzVIYS1_5U1FCqGAy3/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(216.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(216.0, 50%, 50%) !important">
+                    Airline Operations and Quality of Service
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Integrated Operations Control at Hub-Airports with Uncertain Arrival Times
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Jan Evler, Ehsan Asadi, Henning Preis and Hartmut Fricke &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1uA4iaSdVrUuUKiTnU6qeaCNyAxNsye6F/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Towards a more complete view of air transportation performance combining on-time performance and passenger sentiment
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Philippe Monmousseau, Stephane Puechmorel, Daniel Delahaye, Aude Marzuoli and Eric Feron &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1kc4ZZ68jKS3smfQura1g8HUSmcoIK9c5/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/18tFMpCHZqKtddbmhVQWV7GV8mHViD11P/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Optimal Gate Assignment Under Consideration of the Ground Infrastructure
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Philipp Zeunert, Eric Möbius and Markus Herrich &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1V75U7Qp5A9DQP9qg8oxzEYJBowVHHJMB/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1VKh2zKlFojeBy1Jz2NEurl_qkwYH4LZt/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Robust Integrated Airline Scheduling with Chance Constraints
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Yifan Xu, Sebastian Wandelt and Xiaoqian Sun &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1f1Dh-MJ7iUHP5LYslVPPKkS069U2LmIq/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1FCQkvKsWX-1TdsJI0eL6jkMy2JPKBa9-/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(240.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(240.0, 50%, 50%) !important">
+                    Safety
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Estimation of Flight State with a Collision Alert Radar
+Based on FMCW Reflections of the Landscape for General Aviation
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Jerom Maas, Ronald van Gent and Jacco Hoekstra &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1xWHccsG0LWlTHb5DuhqRvtMG2gkU58Bv/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1mUfqoRpQcXWbhOBsaq2JjDGojy-3G1Sy/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Aircraft performance-based redesign of airport obstacle limitation surfaces
+The horizontal obstacle limitation surfaces
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                K. Ahnert, H. Fricke and M. Schultz &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1QK4tUnAfrN_B9OfpENMARSZnMTeWKvkk/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1ardLrUm9nzjiTz1SCwtDMfjTE4cGHIZO/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(264.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(264.0, 50%, 50%) !important">
+                    Complexity and Information 
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Boundary Searching of Unmanned Aircraft System Operations Near Airports
+A Data-Driven Analysis of Airspace Utilization
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Wei Dai and Kin Huat Low &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1JFrUHrJmq-HbxJPTEBBeShS-GQOCTSkJ/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(288.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(288.0, 50%, 50%) !important">
+                    Information Management 
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Validation of GPS by Ground Scanning Radar
+Generated with an on-board wide-angle FMCW radar for General Aviation
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                J. Maas, V. Stefanovici, R. van Gent and J. Hoekstra &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1X9gu1vLeABIELnTaTFmgBZoz3y-6GSge/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1F9yUYeOPZ8pmPZzmmw4Qaeo3CyKpyNGv/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Analyzing Aircraft Surveillance Signal Quality at the 1090 Megahertz Radio Frequency
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Junzi Sun and Jacco M. Hoekstra &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Tx6DJT4LmMtuWt9h1X93rlmBgwzxwvgy/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1qbr2R5mYx_mO7uZMThss4vDFJ895e3nW/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://youtu.be/-LJ656od95E" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(312.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(312.0, 50%, 50%) !important">
+                    Unmanned Aerial Systems
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Droneport Placement Optimization and Capacity Prediction
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Zeng Yixi, Low K. Huat, Vu N. Duong and Michael Schultz &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1b9RYN7MjETJWvoZ9guWv6VPmxODS50Y-/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/14jzDjyw-85JtugkW0ucO9X1cl22HEDFC/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(336.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(336.0, 50%, 50%) !important">
+                    Network Management
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        The Air Traffic Flow Management Problem with Interdependent Flight Schedules
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Benjamin W.J. Tan and Peter L. Jackson &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1wU3-OaaYTMrGWPNTSA5kVqWUughjYefl/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Air Traffic Flow Management under Uncertainty in Terminal Maneuvering Area
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Ying Huo, Daniel Delahaye, Mohammed Sbihi and Yanjun Wang  &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/16CF9iJkPTPOs8Rl5Mn3olr4gNSJT2zuD/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1wq4u40SkjOGiSeXTqfHNdWy6kIFlrVL8/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        A Percolation Theory Based Approach for Identification of Bottleneck Links in an Airway Network
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Chunyao Ma, Qing Cai, Sameer Alam and Vu N. Duong &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1B5qoD5RGvqr7YAHxXm0JV-caYlhQNJy3/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/16V7U4lA0uPb0-QnyiQ0HKq2DkyWgXfT8/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        An Arrival Scheduling Model for Incorporating Collaborative Decision-Making Concepts into Time-Based Flow Management
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Yeming Hao, David J. Lovell, Michael O. Ball, Sergio Torres and Gaurav M. Nagle &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1lqfWxlRz7GYzaKfXlSI2Ey58XPGMMJwR/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1jb5jXnrnQrtmYoAk6keYB5mPDIij0JUT/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        <i class="bx bx-trophy text-primary fw-normal" ></i> 
+                        Tradeoffs between Efficiency and Fairness in Unmanned Aircraft Systems Traffic Management
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Christopher Chin, Karthik Gopalakrishnan, Hamsa Balakrishnan, Maxim Egorov and Antony Evans &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1mopciPBHRJL_A7vDqCi2Jasd_mIJLYnQ/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+        
+        <!-- Category -->
+        <article class="mb-5 pt-5">
+
+            <header class="mb-4">
+                <span class="badge bg-info shadow-info fs-base fw-normal" 
+                      style="background-color: hsl(0.0, 50%, 50%) !important; box-shadow: 0 .5rem 1.125rem -0.5rem hsl(0.0, 50%, 50%) !important">
+                    Doctoral Symposium
+                </span>
+            </header>
+
+            
+            <ul class="list-unstyled mb-0">
+
+
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Effects of aviation liberalization and level of democracy on air connectivity and related economic consequences: Evidence from Africa
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Tassew Dufera Tolcha and Tchouamou Njoya Eric &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/14yySBbxAPidsPxXs-Nv4Dy6wVlEcyzBF/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1XaENyARTW3Ja7iBLfrOt0FlUdpPnqHVT/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Examining the Air Travel Experiences of Individuals with Vision Disabilities
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Bhoomika Bhagchandani and Jeffrey. W. Kassing &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1OLHpaCxoz51wFYgF5i6F0mDbvZn7SDVG/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=10ACGn0RFMw" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Decision Support System for Airline Operation Control Hub Centre (DiSpAtCH)
+Initial research results and developed framework
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Jonas Ernst Bernhard Langner, Thomas Feuerle and Garoe Gonzalez &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/18-GgXMPPCOEhOra68Dw76Z0hLAee1PnJ/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1uW-tUmcMYUW7zf9OANH-TJQkBMJGoDFe/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=UDWjo9-uMnY" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Does the attractiveness of the cabin crew affect the perception of customers? A neuromarketing perspective
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Şahap Akan and Özlem Atalik &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1rWmH7IV6EPR7bCaADC9FNt8QKFHAtRB6/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1d3UK1s4rS-3NWvNZQyC1YNwB9_cP71rl/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=x8N8di7vbTE" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Improvement of Conflict Detection and Resolution at High Densities Through Reinforcement Learning
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Marta Ribeiro, Joost Ellerbroek and Jacco Hoekstra &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1L425QmFXAFbTD5IVn5ThdULT0qhfNbH_/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1KogJuYk8MGVltfkQH27yBk1TmSCl4W2A/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=BTjpPppgebI" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Neural Network based Convection Indicator for Pre-Tactical Air Traffic Flow Management
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Aniel Jardines, Manuel Soler, Javier García-Heras and Alejandro Cervantes Rovira &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Db8jEh6kDcyjDx94J0sozgrptez9NV8y/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1IfG1Gor35zvvjHHG0cgrTf0Bc4670XGE/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=_dMUFjBao1Y" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Modelling and Simulation of APOC Operations
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Sashiko Shirai Reyna, Miguel Mujica Mota, Daniel Delahaye and José M. Ortiz &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1r5QhODkBNO4zuUq5kBbPPJ4Mw2lpGt0Z/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1MoB57uOl8RhcTw1C7oXyYOi2F3J_5R7k/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=_GZEgZD49Ns" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        A Data Collection Scheme to Support Applications for Capacity Enhancements at Small Airports
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Danae Zoe Mitkas and David J. Lovell (Adviser) &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1Ksl_DQF5478CQQ-e3RrSHyLEt8EY-GeC/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1c2e_LD1zHemKdKkiOdNTVVYen3Qw9eOd/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=DxiF_nK4St0" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Advanced Statistical Signal Processing for Next Generation Trajectory Prediction
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Homeyra Khaledian, Xavier Prats and Jordi Vilà-Valls &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1HMlx23liewrwqbaGPbce0NLYgGatlZQX/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1LCRm7FKcampI1QKRBMlUm204b9jVl3H8/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://youtu.be/HOxqL9z8vlw" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Topological Data Analysis on the Northeast Asian Air Route Network
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Authors: <em>
+                                Seyun Kim, Yuyol Shin and Yoonjin Yoon &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1tvtzdbDEU3ICSYNxjKXxIz3XqggSMIbx/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/10DsnBCFGbIrZhj5eZ2OQH8ZrGDp2Iy_j/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=dY-hmJOoVjE" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        How to assess the feasibility of sUAS applications in urban environment: geodemographic analysis of 3D urban space
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Namwoo Kim and Yoonjin Yoon &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1gh87ntDWQ-woPR46iiEVOxiWnVGZ5IrQ/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1p1G_SYAE55JqeRqzQOVXvd8cjLDGbHze/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=mPYWA883H0U" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Classification of Runway Configurations for Capacity Analysis of Airports Serving Small Aircraft
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Hui Jeong Ha and Seth B. Young (Adviser) &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1bFTfSpRRgTX2ifKaqsURlpkQdiKJ_yro/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1h1a1BW4niZZ8V2n5lrQs57ACfEsgHMBW/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        The Effect of Human Resources Management Practices in the Aviation Industry on Employees’ Belonging to Work and Turnover Intention: Mediating Role of Perceived Supervisor Support
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Emrah Durmaz and Mustafa Karaca &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1B67C9lFSr03yuVs83TfLtzgMUdL7y4Ct/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/19GYCvHensuk7gRB0etC7raUWtufRqWlE/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Airspace Design and Trajectory Planning for Urban Air Mobility (UAM) Traffic Management System
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Hualong Tang and Yu Zhang &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1m8mzKy_3RYoc_FtiGipe2KaqkDs9HlOB/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1T4iff7H-8jMz-JOXvNMEGRdnaRDBgzBe/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                        <a href="https://www.youtube.com/watch?v=d0WyuLxqnbs" target="_blank" class="btn btn-outline-primary btn-sm py-1"><i class="bx bx-video fs-lg me-1"></i> Video </a>
+                        
+                    </div>
+                </li>
+              
+                <!-- Item -->
+                <li class="mb-5">
+                    <h3 class="h4 mb-2">
+                        
+                        Exploration of On-Demand Urban Air Mobility: Network Design, Operation Scheduling and Uncertainty Considerations
+                    </h3>
+                        <div class="border-end pe-3 me-3">
+                            Author: <em>
+                                Zhiqiang Wu and Yu Zhang &nbsp;
+                            </em><br/>
+                            
+                        </div>
+                    <div class="d-flex align-items-center pt-1">
+                        
+                        <a href="https://drive.google.com/file/d/1baBvXytm1KtKAyILsoeeequgjVOSiaAs/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-edit fs-lg me-1"></i> Abstract</a>
+                        
+                        
+                        <a href="https://drive.google.com/file/d/1rjNxdgTV9I-HGtoHMAC2lvKsJ4_PKz5a/view?usp=sharing" target="_blank" class="btn btn-outline-primary btn-sm me-2 py-1"><i class="bx bx-download fs-lg me-1"></i> Full Paper</a>
+                        
+                        
+                        
+                    </div>
+                </li>
+              
+
+            </ul>
+        </article>
+        
+
+    </section>
+    </div>
+
+
+
+
+
+
+
+
+<!--fieldset>
+        <h3>2022 ICRAT Sponsors</h3>
+
+        <a href="https://www.faa.gov"><img src="../../../static/images/faa_logo_seal.svg" class=img-responsive" width="150" height="150"/></a>
+        <a href="https://www.eurocontrol.int"><img src="../../../static/images/eurocontrol_logo.svg" style="margin-top:5px; margin-bottom:5px;" class=img-responsive" width="150" height="150"/></a>
+        <a href="https://www.usf.edu/research-innovation/"><img src="../../../static/images/2022/usf_ri_small.png" style="margin-top:5px; margin-bottom:5px;" class=img-responsive"/></a><br/>
+        <a href="https://www.tampaairport.com/"><img src="../../../static/images/2022/tia_ga_logo_medium.jpg" widclass="img-responsive"/></a>
+        <a href="https://www.cutr.usf.edu"><img src="../../../static/images/2022/cutr-circle-with-text-small.jpg" widclass="img-responsive"/></a>
+
+</fieldset -->
+
+
+<!-- Footer -->
+<footer class="footer dark-mode bg-info pt-5 pb-4 pb-lg-5">
+    <!-- we don't include sponsors on landing page -->
+     
+<!-- Sponsors -->
+<div class="container pt-1 pt-md-2 pb-lg-2 pt-lg-4">
+    <h2 class="h3 text-light text-center text-lg-start mb-4 mb-lg-5">ICRAT 2022 Sponsors:</h2>
+    <div class="swiper ms-xxl-n5 me-xxl-n4" data-swiper-options='{
+    "slidesPerView": 2,
+    "spaceBetween": 24,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "breakpoints": {
+      "500": {
+        "slidesPerView": 3
+      },
+      "650": {
+        "slidesPerView": 4
+      },
+      "900": {
+        "slidesPerView": 5
+      },
+      "1100": {
+        "slidesPerView": 6
+      }
+    }
+  }'>
+        
+        <div class="swiper-wrapper align-items-center">
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://eurocontrol.int">
+                <img src="../../../static/img/ec-mono-white.png" class="d-block py-3 mx-auto" width="100" alt="EUROCONTROL">
+                </a>
+            </div>
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.faa.gov/">
+                <img src="../../../static/img/faa.png" class="d-block py-3 mx-auto" width="100" alt="Federal Aviation Administration">
+                </a>
+            </div>
+
+            
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.usf.edu/research-innovation/">
+                <img src="../../../static/img/sponsors/2022/usf_ri_small.png" class="d-block py-3 mx-auto" width="154" alt="University of South Florida Research &amp; Innovation">
+                </a>
+            </div>
+
+            
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.tampaairport.com/">
+                <img src="../../../static/img/sponsors/2022/tia_ga_logo_medium.png" class="d-block py-3 mx-auto" width="154" alt="Tampa International Airport">
+                </a>
+            </div>
+
+            
+
+            <!-- Item -->
+            <div class="swiper-slide">
+                <a href="https://www.cutr.usf.edu/">
+                <img src="../../../static/img/sponsors/2022/cutr-circle-with-text-small.png" class="d-block py-3 mx-auto" width="154" alt="Center for Urban Transportation Research">
+                </a>
+            </div>
+
+            
+
+        </div>
+
+        <!-- Pagination (bullets) -->
+        <div class="swiper-pagination dark-mode position-relative pt-2 mt-4"></div>
+    </div>
+</div> 
+    <div class="container text-center pt-lg-3">
+        <!-- do we want to do small sponsor logos on the bottom? -->
+        <!--div class="d-flex align-items-center justify-content-center mb-3">
+            <div class="navbar-brand text-dark mx-4">
+                <img src="../../../static/img/header-globe.png" class="me-2" width="60" alt="ICRAT">
+                <span class="fs-4">ICRAT</span>
+            </div>
+            <div class="mx-4">
+                <img src="../../../static/img/ec-mono-white.png" width="60" alt="EUROCONTROL">
+            </div>
+            <div class="mx-4">
+                <img src="../../../static/img/faa.png" width="60" alt="FAA">
+            </div>
+        </div -->
+        <ul class="nav justify-content-center pt-3 pb-4 pb-lg-5">
+            <li class="nav-item"><a href="../../../#top" class="nav-link" data-scroll>Home</a></li>
+            <li class="nav-item"><a href="../../../upcoming-conference/" class="nav-link" data-scroll>Upcoming conference</a></li>
+            <li class="nav-item"><a href="../../../#about" class="nav-link" data-scroll>About</a></li>
+            <li class="nav-item"><a href="../../../#schedule" class="nav-link" data-scroll>Schedule</a></li>
+            <li class="nav-item"><a href="../../../#committee" class="nav-link" data-scroll>Committee</a></li>
+            <li class="nav-item"><a href="../../../#venue" class="nav-link" data-scroll>Venue</a></li>
+        </ul>
+        <p class="fs-sm text-center pt-4 mt-lg-4 mb-0">
+            <span class="text-light opacity-50">&copy; All rights reserved. ICRAT 2022</span>
+        </p>
+    </div>
+</footer>
+
+
+<!-- Back to top button -->
+<a href="#top" class="btn-scroll-top" data-scroll>
+    <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+    <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+</a>
+
+
+<!-- Vendor Scripts -->
+<!--script src="../../../static/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.3/smooth-scroll.min.js" integrity="sha512-HYG9E+RmbXS7oy529Nk8byKFw5jqM3R1zzvoV2JnltsIGkK/AhZSzciYCNxDMOXEbYO9w6MJ6SpuYgm5PJPpeQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!--script src="../../../static/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script-->
+
+<!--script src="../../../static/vendor/swiper/swiper-bundle.min.js"></script-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.2.4/swiper-bundle.min.js" integrity="sha512-Hvn3pvXhhG39kmZ8ue3K8hw8obT4rfLXHE5n+IWNCMkR6oV3cfkQNUQqVvX3fNJO/JtFeo/MfLmqp5bqAT+8qg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="../../../static/vendor/lightgallery/lightgallery.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.5.0/lightgallery.min.js" integrity="sha512-FDbnUqS6P7md6VfBoH57otIQB3rwZKvvs/kQ080nmpK876/q4rycGB0KZ/yzlNIDuNc+ybpu0HV3ePdUYfT5cA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script-->
+
+<script src="../../../static/vendor/lightgallery/plugins/zoom/lg-zoom.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lg-zoom/1.3.0/lg-zoom.min.js" referrerpolicy="no-referrer"></script-->
+
+<script src="../../../static/vendor/lightgallery/plugins/fullscreen/lg-fullscreen.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lg-fullscreen/1.2.1/lg-fullscreen.min.js" integrity="sha512-GvMYZx1AUxtd+OYSc33H9DYX9qeT/OY90+O8kJ65cLXvSelNSgeytaxDV8bY58TeoZxz1HiqgAfpchczH7S8qA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script-->
+
+<script src="../../../static/vendor/lightgallery/plugins/video/lg-video.min.js"></script>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/lg-video/1.4.0/lg-video.min.js" referrerpolicy="no-referrer"></script-->
+
+<!-- Main Theme Script -->
+<script src="../../../static/js/theme.min.js"></script>
+
+
+</body>
+
+</html>
