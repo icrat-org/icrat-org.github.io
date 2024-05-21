@@ -152,7 +152,7 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <!--a href="upcoming-conference/" class="nav-link">Upcoming Conference <br/>ICRAT 2024</a -->
-                        <a class="nav-link" href="https://event.ntu.edu.sg/ICRAT-2024/">Upcoming Conference [external site]</a>
+                        <a href="https://event.ntu.edu.sg/ICRAT-2024/">Upcoming Conference [external site]</a>
                     </li>
                     <!--li class="nav-item dropdown">
                         
@@ -254,12 +254,8 @@
 </div>
                     </div>
                     <div class="alert alert-primary" role="alert">
-                        Registration will remain open until <strong><em>June 15th!</em></strong><br/> See
+                    Registration now open!  See
                         <a class="alert-link" href="https://event.ntu.edu.sg/ICRAT-2024/">Upcoming Conference [external site]</a> for more information!
-                    
-                    </div>
-                    <div class="alert alert-primary" role="alert">
-                        <a class="alert-link" href="upcoming-conference/ICRAT_2024_Schedule.pdf">Conference Program (PDF)</a>
                     
                     </div>
                     <div class="d-flex flex-column justify-content-center justify-content-lg-start py-4 py-lg-5">
